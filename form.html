@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+    <html>
+      <head>
+        <title>About Me</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      </head>
+      <body>
+        <nav class="navbar navbar-expand-sm bg-light">
+
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" style="color:black" href="./index.html">Home</a>
+            </li>
+          </ul>
+
+        </nav>
+
+        <div class="container">
+      		<form name="formName">
+
+            <h1>Add New Interest</h1>
+
+      			<div class="form-group">
+              <label>Interest Name</label>
+              <input type="text" class="form-control" placeholder="Name">
+      			</div>
+
+      			<div class="form-group">
+      				<label>Text About Interest</label>
+      				<textarea class="form-control" rows="5"></textarea>
+      			</div>
+            <div class="form-group row" style="margin-left:25px">
+              <div class="form-group">
+                <label>Upload Local Image:</label>
+                <input type="file" class="form-control-file">
+              </div>
+              <div class="form-group">
+                <label>Select # Tweets to Display:</label>
+                <select class="custom-select custom-select-sm">
+      					  <option selected value="1">1</option>
+      					  <option value="2">2</option>
+      					  <option value="3">3</option>
+      					  <option value="4">4</option>
+                  <option value="5">5</option>
+      					</select>
+              </div>
+      			</div>
+
+            <!-- I had to use some javascript in order to get the checkboxes to behave as radios-->
+            <div class="form-group" style="margin-left:25px">
+              <label>On a scale of 1-5, how interested in this are you?</label> <br>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" onclick="if(this.checked) {document.formName.check5.checked=false; document.formName.check2.checked=false; document.formName.check3.checked=false; document.formName.check4.checked=false;}" name="check1" value="1" checked>
+                <label class="form-check-label">1</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" onclick="if(this.checked) {document.formName.check1.checked=false; document.formName.check5.checked=false; document.formName.check3.checked=false; document.formName.check4.checked=false;}" name="check2" value="2">
+                <label class="form-check-label">2</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" onclick="if(this.checked) {document.formName.check1.checked=false; document.formName.check2.checked=false; document.formName.check5.checked=false; document.formName.check4.checked=false;}" name="check3" value="3">
+                <label class="form-check-label">3</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" onclick="if(this.checked) {document.formName.check1.checked=false; document.formName.check2.checked=false; document.formName.check3.checked=false; document.formName.check5.checked=false;}" name="check4" value="4">
+                <label class="form-check-label">4</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" onclick="if(this.checked) {document.formName.check1.checked=false; document.formName.check2.checked=false; document.formName.check3.checked=false; document.formName.check4.checked=false;}" name="check5" value="5">
+                <label class="form-check-label">5</label>
+              </div>
+      			</div>
+            <label>Login To Finish Submitting</label>
+      			<div class="form-group row" style="margin-left:15px">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Username">
+        			</div>
+      				<div class="form-group">
+      					<input type="password" class="form-control" placeholder="Password">
+      				</div>
+      			</div>
+
+      			<input type="submit" value="Submit" class="btn btn-primary">
+
+      		</form>
+      		<br>
+      	</div>
+
+      </body>
+    </html>
